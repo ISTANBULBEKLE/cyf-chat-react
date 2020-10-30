@@ -24,3 +24,9 @@ code {
   justify-content:center;
   align-items:center;
 }
+.message-block-div{
+  border:1px solid  rgb(11, 114, 231);
+}
+.message-block{
+    border:1px solid rgb(11, 114, 231);
+}

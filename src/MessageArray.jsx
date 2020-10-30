@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import MessageDiv from './MessageDiv';
 
-const MessageArray = ({submitForm}) => {
+const MessageArray = ({callToGetMessage}) => {
 
 const[messages, setMessages]= useState([]);
 
@@ -11,7 +11,10 @@ function getMessages (){
     setMessages(messages);
 }
 
-submitForm(getMessages);
+function callSubmit (){
+    callToGetMessage(getMessages);
+}
+
 useEffect(()=>{
 fetch('https://ekip-kalir-chat-server.glitch.me/messages')
 .then(response=>response.json())

@@ -25,15 +25,15 @@ const MessageForm = () => {
             .then(x => x.json())
             .then(x => console.log('success', x))
             .catch(e => console.log('Error:', e));
-
-
-
     }
 
+   function callToGetMessage(c){
+        submitForm(c);
+    }
 
   return (
     <div className='cover-form'>
-        <MessageArray submitForm = {submitForm}/>
+        <MessageArray callToGetMessage= {callToGetMessage}/>
         <h1 className="h3 mb-3 font-weight-normal">Write the message </h1>
         <br></br>
         <input type="text" name='from' value={from} className="form-control top message" placeholder="From" onChange={e => setFrom(e.target.value)} required autoFocus/>
