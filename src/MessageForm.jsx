@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import MessageArray from "./MessageArray";
 
 const MessageForm = () => {
 
@@ -32,9 +33,8 @@ const MessageForm = () => {
 
   return (
     <div className='cover-form'>
-
+        <MessageArray submitForm = {submitForm}/>
         <h1 className="h3 mb-3 font-weight-normal">Write the message </h1>
-        <hr></hr>
         <br></br>
         <input type="text" name='from' value={from} className="form-control top message" placeholder="From" onChange={e => setFrom(e.target.value)} required autoFocus/>
         <input type="text" name='text' value={text} className="form-control middle message" placeholder="Text" onChange={e => setText(e.target.value)} required autoFocus />
